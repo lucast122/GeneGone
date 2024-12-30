@@ -1,5 +1,6 @@
 import subprocess
 import os
+import shutil
 import pandas as pd
 import numpy as np
 from Bio import SeqIO
@@ -107,7 +108,7 @@ def process_alignment(sam_path: str, output_bam: str, read_type: ReadType) -> bo
                 output_bam,
                 "-o", "temp_filtered.bam"
             ], check=True)
-            os.rename("temp_filtered.bam", output_bam)
+            shutil.move("temp_filtered.bam", output_bam)
             subprocess.run([
                 "samtools", "index",
                 "-@", str(CPU_CORES-1),
