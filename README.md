@@ -3,7 +3,7 @@ Web app for checking if gene knockouts worked using sequencing reads and a refer
 =======
 # GeneGone: Gene Deletion Analysis Tool
 
-A tool for analyzing gene deletions. Requires input reads (Illumina, Nanopore, or Pacbio) and a reference genome containing the deleted gene. Also the user needs to specify the coordinates of the gene in the reference, then the tool aligns the reads against the reference and checks the coverage data to determine if the knockout was successful.
+A tool for analyzing gene deletions. Requires input reads (Illumina, Nanopore, or Pacbio), a reference genome of the wild type that still has the deleted gene and the position of the targeted gene in the reference. The tool aligns the reads against the reference and checks the coverage data to determine if the knockout was successful.
 
 
 ## Features
@@ -73,4 +73,3 @@ streamlit run app.py
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
->>>>>>> 50462fa (first commit)
