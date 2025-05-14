@@ -35,12 +35,20 @@ pip install -r requirements.txt
 brew install minimap2 bwa samtools
 ```
 
+
+
 ## Usage
 1. Start the Streamlit app:
 ```bash
 streamlit run app.py
 ```
 2. Select your sequencing platform (Nanopore, PacBio, or Illumina)
+
+<img src="screenshots/genegone_input.png"
+     alt="User input for GeneGone"
+     style="float: left; margin-right: 10px;" />
+
+
 3. Upload your input files:
    - Sequencing reads (FASTQ format)
    - Reference genome (FASTA format)
@@ -70,6 +78,11 @@ streamlit run app.py
 - Deletion percentage and status
 - Mean coverage statistics
 - Downloadable coverage data (CSV)
+
+<img src="screenshots/genegone_plot.png"
+     alt="User input for GeneGone"
+     style="float: left; margin-right: 10px;" />
+
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
