@@ -3,7 +3,7 @@ Web app for checking if gene knockouts worked using sequencing reads and a refer
 =======
 # GeneGone: Gene Deletion Analysis Tool
 
-A tool for analyzing gene deletions. Requires input reads (Illumina, Nanopore, or Pacbio) and a reference genome containing the deleted gene. Also the user needs to specify the coordinates of the gene in the reference, then the tool aligns the reads against the reference and checks the coverage data to determine if the knockout was successful.
+A tool for analyzing gene deletions. Requires input reads (Illumina, Nanopore, or Pacbio), a reference genome of the wild type that still has the deleted gene and the position of the targeted gene in the reference. The tool aligns the reads against the reference and checks the coverage data to determine if the knockout was successful.
 
 
 ## Features
@@ -35,12 +35,20 @@ pip install -r requirements.txt
 brew install minimap2 bwa samtools
 ```
 
+
+
 ## Usage
 1. Start the Streamlit app:
 ```bash
 streamlit run app.py
 ```
 2. Select your sequencing platform (Nanopore, PacBio, or Illumina)
+
+<img src="screenshots/genegone_input.png"
+     alt="User input for GeneGone"
+     style="float: left; margin-right: 10px;" />
+
+
 3. Upload your input files:
    - Sequencing reads (FASTQ format)
    - Reference genome (FASTA format)
@@ -71,6 +79,10 @@ streamlit run app.py
 - Mean coverage statistics
 - Downloadable coverage data (CSV)
 
+<img src="screenshots/genegone_plot.png"
+     alt="User input for GeneGone"
+     style="float: left; margin-right: 10px;" />
+
+
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
->>>>>>> 50462fa (first commit)
