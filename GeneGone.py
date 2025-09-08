@@ -25,9 +25,9 @@ def main():
     # Start Streamlit server
     streamlit_cmd = [sys.executable, "-m", "streamlit", "run", 
                     os.path.join(app_path, "app.py"),
-                    "--server.address", "localhost",
-                    "--server.port", "8501",
-                    "--browser.serverAddress", "localhost",
+                    "--server.address", "134.2.78.150",
+                    "--server.port", "8502",
+                    "--browser.serverAddress", "134.2.78.150",
                     "--server.headless", "true",
                     "--browser.gatherUsageStats", "false"]
     

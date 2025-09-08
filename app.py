@@ -148,12 +148,12 @@ if st.button("Run Analysis"):
             deletion_status = "DELETION DETECTED" if analysis_results['deletion_detected'] else "NO DELETION"
             status_color = "red" if analysis_results['deletion_detected'] else "green"
             st.markdown(f"<h3 style='text-align: center; color: {status_color};'>{deletion_status}</h3>", unsafe_allow_html=True)
-        with col2:
-            st.metric(
-                "Coverage Reduction",
-                f"{analysis_results['deletion_percentage']:.1f}%",
-                delta=None
-            )
+       # with col2:
+        #    st.metric(
+         #       "Coverage Reduction",
+          #      f"{analysis_results['deletion_percentage']:.1f}%",
+           #     delta=None
+           # )
         with col3:
             st.metric(
                 "Mean Coverage",
